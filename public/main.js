@@ -79,6 +79,17 @@ function updateTeamTwo(event) {
   team2Log.textContent = event.target.value
 }
 
+function updateButton(event) {
+  const valueCountTeam1 = document.querySelector('.team1Score')
+  const valueCountTeam2 = document.querySelector('.team2Score')
+  const header = document.querySelector('h1')
+  header.textContent = 'My Score Board'
+  teamOne = 0
+  teamTwo = 0
+  valueCountTeam1.textContent = `${teamOne}`
+  valueCountTeam2.textContent = `${teamTwo}`
+}
+
 const main = () => {
   const team1AddPoint = document.querySelector('.team1 .add')
   const team1SubtractPoint = document.querySelector('.team1 .subtract')
@@ -97,6 +108,9 @@ const main = () => {
 
   const inputForTeam2Name = document.querySelector('.team2 input')
   inputForTeam2Name.addEventListener('input', updateTeamTwo)
+
+  const button = document.querySelector('.resetButton button')
+  button.addEventListener('click', updateButton)
 }
 
 document.addEventListener('DOMContentLoaded', main)
