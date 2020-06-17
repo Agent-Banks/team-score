@@ -2,13 +2,26 @@ let teamOne = 0
 let teamTwo = 0
 function handleAddingPointToTeam1() {
   const valueCount = document.querySelector('.team1Score')
+
+  if (teamOne >= 21) {
+    teamOne = 21
+    return
+  }
+
   teamOne++
   valueCount.textContent = `${teamOne}`
+
+  if (teamOne >= 21) {
+    const header = document.querySelector('h1')
+    header.textContent = 'The winner is Team One!'
+  }
 }
 
 function handleSubtractingPointToTeam1() {
   const valueCount = document.querySelector('.team1Score')
+
   teamOne--
+
   if (teamOne < 0) {
     teamOne = 0
   }
@@ -17,8 +30,19 @@ function handleSubtractingPointToTeam1() {
 
 function handleAddingPointToTeam2() {
   const valueCount = document.querySelector('.team2Score')
+
+  if (teamTwo >= 21) {
+    teamTwo = 21
+    return
+  }
+
   teamTwo++
   valueCount.textContent = `${teamTwo}`
+
+  if (teamTwo >= 21) {
+    const header = document.querySelector('h1')
+    header.textContent = 'The winner is Team Two!'
+  }
 }
 
 function handleSubtractingPointToTeam2() {
