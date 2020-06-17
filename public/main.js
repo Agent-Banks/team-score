@@ -20,11 +20,17 @@ function handleAddingPointToTeam1() {
 function handleSubtractingPointToTeam1() {
   const valueCount = document.querySelector('.team1Score')
 
+  if (teamOne >= 21) {
+    teamOne = 21
+    return
+  }
+
   teamOne--
 
-  if (teamOne < 0) {
+  if (teamOne <= 0) {
     teamOne = 0
   }
+
   valueCount.textContent = `${teamOne}`
 }
 
@@ -47,10 +53,19 @@ function handleAddingPointToTeam2() {
 
 function handleSubtractingPointToTeam2() {
   const valueCount = document.querySelector('.team2Score')
+
+  if (teamTwo >= 21) {
+    teamTwo = 21
+    return
+  }
+
   teamTwo--
+  valueCount.textContent = `${teamTwo}`
+
   if (teamTwo < 0) {
     teamTwo = 0
   }
+
   valueCount.textContent = `${teamTwo}`
 }
 
