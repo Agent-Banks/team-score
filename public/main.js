@@ -69,6 +69,11 @@ function handleSubtractingPointToTeam2() {
   valueCount.textContent = `${teamTwo}`
 }
 
+function updateTeamOne(event) {
+  const team1Log = document.querySelector('.team1 h2')
+  team1Log.textContent = event.target.value
+}
+
 const main = () => {
   const team1AddPoint = document.querySelector('.team1 .add')
   const team1SubtractPoint = document.querySelector('.team1 .subtract')
@@ -82,12 +87,8 @@ const main = () => {
   team2AddPoint.addEventListener('click', handleAddingPointToTeam2)
   team2SubtractPoint.addEventListener('click', handleSubtractingPointToTeam2)
 
-  const team1Name = document.querySelector('.team1 .team1NameInput')
-  const team1NameLog = document.getElementById('.team1 .team1Name')
-  team1Name.addEventListener('.team1 .team1NameInput', updateValue)
-  function updateValue(e) {
-    team1NameLog.textContent = e.target.Value
-  }
+  const inputForTeam1Name = document.querySelector('.team1 input')
+  inputForTeam1Name.addEventListener('input', updateTeamOne)
 }
 
 document.addEventListener('DOMContentLoaded', main)
