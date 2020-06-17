@@ -74,6 +74,11 @@ function updateTeamOne(event) {
   team1Log.textContent = event.target.value
 }
 
+function updateTeamTwo(event) {
+  const team2Log = document.querySelector('.team2 h2')
+  team2Log.textContent = event.target.value
+}
+
 const main = () => {
   const team1AddPoint = document.querySelector('.team1 .add')
   const team1SubtractPoint = document.querySelector('.team1 .subtract')
@@ -89,6 +94,9 @@ const main = () => {
 
   const inputForTeam1Name = document.querySelector('.team1 input')
   inputForTeam1Name.addEventListener('input', updateTeamOne)
+
+  const inputForTeam2Name = document.querySelector('.team2 input')
+  inputForTeam2Name.addEventListener('input', updateTeamTwo)
 }
 
 document.addEventListener('DOMContentLoaded', main)
