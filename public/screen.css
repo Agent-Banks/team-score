@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
 :root {
   font: 16px / 1 sans-serif;
 }
@@ -6,11 +8,20 @@ html {
   height: 100%;
 }
 
+header {
+  background-color: rgb(147, 240, 240);
+  padding-top: 0.1rem;
+  height: 70px;
+}
+
 body {
   margin: 0;
   min-height: 100%;
-  background-color: #f1e6eb;
-  color: #2b303a;
+  background-color: #606be3;
+  color: #0b3b9d;
+  border: thin solid #8acce8;
+  border-width: 1rem;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 h1 {
@@ -23,19 +34,25 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
 }
 
 section {
   min-width: 20rem;
   border: thin solid #7c7c7c;
-  border-radius: 0.3rem;
+  border-radius: 1rem;
   margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #6a96e3;
+  box-shadow: 1rem #7c7c7c;
 }
 
-section h2, section p {
+section h2,
+section p {
   text-align: center;
 }
 
@@ -65,4 +82,8 @@ fieldset i.add {
 
 fieldset i.subtract {
   color: #f64545;
+}
+
+input {
+  background-color: #6aaae1;
 }
