@@ -1,5 +1,6 @@
 let teamOne = 0
 let teamTwo = 0
+
 function handleAddingPointToTeam1() {
   const valueCount = document.querySelector('.team1Score')
 
@@ -60,7 +61,6 @@ function handleSubtractingPointToTeam2() {
   }
 
   teamTwo--
-  valueCount.textContent = `${teamTwo}`
 
   if (teamTwo < 0) {
     teamTwo = 0

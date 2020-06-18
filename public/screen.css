@@ -9,7 +9,7 @@ html {
 }
 
 header {
-  background-color: rgb(147, 240, 240);
+  background-color: #119da4;
   padding-top: 0.1rem;
   height: 70px;
 }
@@ -17,9 +17,9 @@ header {
 body {
   margin: 0;
   min-height: 100%;
-  background-color: #606be3;
-  color: #0b3b9d;
-  border: thin solid #8acce8;
+  background-color: #13505b;
+  color: #040404;
+  border: thin solid #d7d9ce;
   border-width: 1rem;
   font-family: 'Roboto Condensed', sans-serif;
 }
@@ -47,7 +47,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #6a96e3;
+  background-color: #0c7489;
   box-shadow: 1rem #7c7c7c;
 }
 
@@ -86,4 +86,6 @@ fieldset i.subtract {
 
 input {
   background-color: #6aaae1;
+  width: 80%;
+  height: 80%;
 }
